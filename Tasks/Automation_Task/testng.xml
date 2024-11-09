@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Registration and Login Suite">
+
+    <!-- Test for Registration with URL -->
+    <test name="Test_With_Url_1">
+        <parameter name="browser"  value="Chrome"/>
+        <parameter name="url" value="https://phptravels.net/signup"/> <!-- URL for Registration -->
+        <classes>
+            <class name="testCases.tests">
+            <methods>
+                <include name="testRegistration"/>
+                <exclude name="testLogin"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test for Login with URL, depends on Test_With_Url_1 -->
+    <test name="Test_With_Url_2">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="url" value="https://phptravels.net/login"/> <!-- URL for Login -->
+
+        <classes>
+            <class name="testCases.tests">
+                <methods>
+                    <exclude name="testRegistration"/>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
