@@ -57,4 +57,7 @@ The script includes a Thread.sleep(20000) to allow manual solving of CAPTCHA. Ad
 Incomplete login assertions are noted in testLogin and should be implemented as required.
 Author
 
+Manual TestCases for state transitions
+#ExcelSheet Documents : Test cases that cover main business rules 
+
 # Hany Ashraf
